@@ -16,6 +16,13 @@
 #define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4
 #define WHRMR(k1,k2,k3) &ht RCTRL k1  &ht RGUI k2  &ht RALT k3
 
+/ {
+    chosen {
+        zmk,matrix_transform = &default_transform;
+
+        // zmk,matrix_transform = &five_column_transform;
+    };
+};
 
 / {
     behaviors {
@@ -31,15 +38,7 @@
         };
     };
 
-/ {
-    chosen {
-        zmk,matrix_transform = &default_transform;
 
-        // zmk,matrix_transform = &five_column_transform;
-    };
-};
-
-/ {
     keymap {
         compatible = "zmk,keymap";
 
