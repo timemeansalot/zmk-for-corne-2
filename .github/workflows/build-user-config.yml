@@ -40,7 +40,7 @@ jobs:
       - name: Fetch Build Matrix
         run: |
           echo "inputs is: ${{inputs}}"
-          echo "build_matrix=$(yaml2json ${{ inputs.build_matrix_path }} | jq -c .)" >> $GITHUB_ENV
+          echo "build_matrix={\"include\": [{\"board\": \"corneish_zen_v2_left\"}]}" >> $GITHUB_ENV
           yaml2json ${{ inputs.build_matrix_path }} | jq
 
   build:
