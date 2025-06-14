@@ -119,6 +119,7 @@ jobs:
           
       - name: List artifacts directory
         run: |
+          echo "archive_name=${{ inputs.archive_name }}"
           ls -l build/artifacts
 
       - name: Archive (${{ env.display_name }})
