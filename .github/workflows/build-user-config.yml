@@ -115,6 +115,10 @@ jobs:
           then
             cp build/zephyr/zmk.${{ inputs.fallback_binary }} "build/artifacts/${{ env.artifact_name }}.${{ inputs.fallback_binary }}"
           fi
+          
+      - name: List artifacts directory
+        run: |
+          ls -l build/artifacts
 
       - name: Archive (${{ env.display_name }})
         uses: actions/upload-artifact@v4
