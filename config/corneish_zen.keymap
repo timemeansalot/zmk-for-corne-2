@@ -37,17 +37,17 @@
 &kp TAB       &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT     &kp CARET       &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
 &kp CAPSLOCK  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp MINUS       &kp EQUAL      &kp GRAVE     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE
 &kp LEFT_ALT  &kp NUMBER_6     &kp N7        &kp N8        &kp N9        &kp NUMBER_0    &kp UNDERSCORE  &kp PLUS       &kp TILDE     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RIGHT_ALT
-                                             &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE       &kp ENTER       &kp DELETE     &trans
+                                             &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE       &kp ENTER       &kp BACKSPACE  &trans
             >;
         };
 
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp TAB         &kp F1        &kp F2        &kp F3                 &kp F4               &kp F5              &kp F6          &kp F7          &kp F8        &kp F9     &kp F10  &none
-&kp LEFT_SHIFT  &kp LS(F14)   &kp LS(F15)   &kp LS(C_VOLUME_DOWN)  &kp LS(C_VOLUME_UP)  &kp C_PLAY_PAUSE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans   &trans
-&kp LCTRL       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2           &bt BT_SEL 3         &bt BT_CLR_ALL      &trans          &trans          &trans        &trans     &trans   &trans
-                                            &trans                 &trans               &trans              &trans          &trans          &trans
+&kp TAB         &kp F1                    &kp F2                        &kp F3                 &kp F4               &kp F5              &kp F6          &kp F7          &kp F8        &kp F9     &kp F10  &none
+&kp LEFT_SHIFT  &kp LS(C_BRIGHTNESS_DEC)  &kp LS(RA(C_BRIGHTNESS_INC))  &kp LS(C_VOLUME_DOWN)  &kp LS(C_VOLUME_UP)  &kp C_PLAY_PAUSE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans   &trans
+&kp LCTRL       &bt BT_SEL 0              &bt BT_SEL 1                  &bt BT_SEL 2           &bt BT_SEL 3         &bt BT_CLR_ALL      &trans          &trans          &trans        &trans     &trans   &trans
+                                                                        &trans                 &trans               &trans              &trans          &trans          &trans
             >;
         };
     };
