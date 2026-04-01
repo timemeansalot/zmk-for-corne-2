@@ -5,7 +5,8 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      # This config repo still uses the pre-HWMv2 custom board layout.
+      revision: v0.3
       import: app/west.yml
   self:
     path: config
