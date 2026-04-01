@@ -39,8 +39,7 @@ jobs:
 
       - name: Fetch Build Matrix
         run: |
-          echo "inputs is: ${{inputs}}"
-          echo "build_matrix={\"include\": [{\"board\": \"corneish_zen_v2_left\"}]}" >> $GITHUB_ENV
+          echo "build_matrix=$(yaml2json ${{ inputs.build_matrix_path }} | jq -c .)" >> $GITHUB_ENV
           yaml2json ${{ inputs.build_matrix_path }} | jq
 
   build:
@@ -117,11 +116,6 @@ jobs:
             cp build/zephyr/zmk.${{ inputs.fallback_binary }} "build/artifacts/${{ env.artifact_name }}.${{ inputs.fallback_binary }}"
           fi
           
-      - name: List artifacts directory
-        run: |
-          echo "archive_name=${{ inputs.archive_name }}"
-          ls -l build/artifacts
-
       - name: Archive (${{ env.display_name }})
         uses: actions/upload-artifact@v4
         with:
